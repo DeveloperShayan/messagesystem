@@ -136,6 +136,7 @@ class MessagesController extends Controller
         $messages = Message::with('userFrom')->where('user_id_to',Auth::id())->Deleted()->get();
         return view('deleted')->with('messages',$messages);
     }
+    
 
     public function return(int $id)
     {
